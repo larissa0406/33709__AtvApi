@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Parking API</title>
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <h1>Estacionamento</h1>
+
+  <h2>Cadastrar Veículo</h2>
+  <input type="text" id="placa" placeholder="Placa">
+  <input type="text" id="modelo" placeholder="Modelo">
+  <input type="text" id="cor" placeholder="Cor">
+  <button onclick="cadastrarVeiculo()">Cadastrar</button>
+
+  <h2>Listar Veículos</h2>
+  <button onclick="listarVeiculos()">Listar</button>
+  <ul id="lista-veiculos"></ul>
+<script src="../javascript/script.js"></script>
+</body>
+</html>

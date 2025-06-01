@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API estacionamento</title>
+    <style>
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: 600;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+        .resultado {
+            margin-top: 15px;
+            color: green;
+            font-weight: bold;
+        }
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Estacionamento</h1>
+
+    <!-- Registro de Entrada -->
+    <div class="card">
+        <h2>Registrar Entrada</h2>
+        <form id="carForm">
+            <label for="model">Modelo:</label>
+            <input type="text" id="model" required>
+
+            <label for="plate">Placa:</label>
+            <input type="text" id="plate" required>
+
+            <button type="submit">Registrar Entrada</button>
+        </form>
+        <div class="resultado" id="resultado"></div>
+    </div>
+
+    <!-- Consultar Tempo -->
+    <div class="card">
+        <h2>Tempo de Permanência</h2>
+        <form id="tempoForm">
+            <label for="tempoPlate">Placa:</label>
+            <input type="text" id="tempoPlate" required>
+
+            <button type="submit">Consultar</button>
+        </form>
+        <div class="resultado" id="tempo"></div>
+    </div>
+
+    <!-- Registrar Saída -->
+    <div class="card">
+        <h2>Registrar Saída</h2>
+        <form id="saidaForm">
+            <label for="saidaPlate">Placa:</label>
+            <input type="text" id="saidaPlate" required>
+
+            <button type="submit">Registrar Saída</button>
+        </form>
+        <div class="resultado" id="saidaResultado"></div>
+    </div>
+
+   
+
+    <script src="javascript/script.js"></script>
+
+</body>
+</html>

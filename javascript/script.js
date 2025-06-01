@@ -4,9 +4,7 @@ const API_BASE = 'http://cnms-parking-api.net.uztec.com.br/api/v1/';
 const endpoints = {
     entrada: `${API_BASE}entry`,
     tempo: `${API_BASE}time/`,
-    saida: `${API_BASE}exit/`,
-    atualizar: `${API_BASE}update/`,
-    cancelar: `${API_BASE}cancel/`
+
 };
 
 // Função para fazer requisições genéricas
@@ -56,19 +54,5 @@ document.getElementById('tempoForm').addEventListener('submit', async (e) => {
     }
 });
 
-// Registrar saída
-document.getElementById('saidaForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    const placa = document.getElementById('saidaPlate').value;
-
-    try {
-        await requisicao(endpoints.saida + placa, 'PATCH');
-        document.getElementById('saidaResultado').textContent = '🚗 Saída registrada!';
-    } catch (err) {
-        document.getElementById('saidaResultado').textContent = '❌ Erro na saída.';
-        console.error(err);
-    }
-});
 
 
